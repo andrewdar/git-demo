@@ -1,0 +1,585 @@
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 ~
+$ cd /c/DiscD/GitRep1/git-demo
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ ls
+README.md  song.txt
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git checkout --song.txt
+error: unknown option `song.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge, diff3, or zdiff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git log
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b (HEAD -> main, origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+
+    add 2 more rows into song.txt
+
+commit 2b66319cdd366f14486f99a3a7d6629fd2e791e7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:15:16 2022 +0300
+
+    add first 2 rows
+
+commit 60a571b248cd23d02c60fffdfb8ef2a0a9a1990f
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:05:45 2022 +0300
+
+    Initial commit
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   song.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git add song.txt
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   song.txt
+
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git commit song.txt
+Aborting commit due to empty commit message.
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   song.txt
+
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git gui&
+[1] 427
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[1]+  Done                    git gui
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   song.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git add song.txt
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git commit -m "finalize of 2nd couplet"
+[main f0848e1] finalize of 2nd couplet
+ 1 file changed, 2 insertions(+)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andrewdar/git-demo.git
+   c62d94c..f0848e1  main -> main
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   song.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git add song.txt
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git commit -m "fogotten line"
+[main d7ab768] fogotten line
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 317 bytes | 317.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andrewdar/git-demo.git
+   f0848e1..d7ab768  main -> main
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git log
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (HEAD -> main, origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+
+    add 2 more rows into song.txt
+
+commit 2b66319cdd366f14486f99a3a7d6629fd2e791e7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:15:16 2022 +0300
+
+    add first 2 rows
+
+commit 60a571b248cd23d02c60fffdfb8ef2a0a9a1990f
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:05:45 2022 +0300
+:
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (HEAD -> main, origin/main, orig
+in/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+
+    add 2 more rows into song.txt
+
+commit 2b66319cdd366f14486f99a3a7d6629fd2e791e7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:15:16 2022 +0300
+
+    add first 2 rows
+
+commit 60a571b248cd23d02c60fffdfb8ef2a0a9a1990f
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:05:45 2022 +0300
+
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ revert d7ab7
+
+bash: evert: command not found
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git revert d7ab7
+[main 3cc8494] Revert "fogotten line"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git log
+commit 3cc84945a67ef6f42eb78477f7a0f1aa3c2fc05a (HEAD -> main)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:57:07 2022 +0300
+
+    Revert "fogotten line"
+
+    This reverts commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925.
+
+    I'm so sorry!
+
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+:
+commit 3cc84945a67ef6f42eb78477f7a0f1aa3c2fc05a (HEAD -> main)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:57:07 2022 +0300
+
+    Revert "fogotten line"
+
+    This reverts commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925.
+
+    I'm so sorry!
+
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+:
+commit 3cc84945a67ef6f42eb78477f7a0f1aa3c2fc05a (HEAD -> main)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:57:07 2022 +0300
+
+    Revert "fogotten line"
+
+    This reverts commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925.
+
+    I'm so sorry!
+
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+:
+commit 3cc84945a67ef6f42eb78477f7a0f1aa3c2fc05a (HEAD -> main)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:57:07 2022 +0300
+
+    Revert "fogotten line"
+
+    This reverts commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925.
+
+    I'm so sorry!
+
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+:
+commit 3cc84945a67ef6f42eb78477f7a0f1aa3c2fc05a (HEAD -> main)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:57:07 2022 +0300
+
+    Revert "fogotten line"
+
+    This reverts commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925.
+
+    I'm so sorry!
+
+commit d7ab7689509b8fc3e1e1bb6c44509f4eda0fb925 (origin/main, origin/HEAD)
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:50:59 2022 +0300
+
+    fogotten line
+
+commit f0848e18384d965e5d7033b502900e6a9bb8a30c
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:48:34 2022 +0300
+
+    finalize of 2nd couplet
+
+commit c62d94c81c7db925b797bb3d8d5dbf88c31c0cb7
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Wed Jul 6 22:40:06 2022 +0300
+
+    commit
+
+commit a87eed611c4cdbedd2c53f3e7a260c075befcf7b
+Author: Andrey Daragenski <andrey.daragenski@outllok.com>
+Date:   Sat Jul 2 23:27:45 2022 +0300
+
+    add 3rd portion of rows to the song
+
+commit b95c2ab31eb7af13d4a2133da5210d0886164995
+Author: andrewdar <68469839+andrewdar@users.noreply.github.com>
+Date:   Sat Jul 2 23:19:45 2022 +0300
+:
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 353 bytes | 353.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andrewdar/git-demo.git
+   d7ab768..3cc8494  main -> main
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (feature)
+$ git add song.txt
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (feature)
+$ git commit -m "add 2 ros of 3rd couplet"
+[feature 49b7fd4] add 2 ros of 3rd couplet
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git merge feature
+Updating 3cc8494..49b7fd4
+Fast-forward
+ song.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ gitk&
+[1] 598
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git add README.md
+[1]+  Done                    gitk
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git commit -m "master commit"
+[main d64dbea] master commit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (feature)
+$ git add song.txt
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (feature)
+$ git commit -m "feature commit"
+[feature df9219b] feature commit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git merge feature
+Merge made by the 'ort' strategy.
+ song.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ gitk&
+[1] 658
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$ git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 1.09 KiB | 1.09 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To github.com:andrewdar/git-demo.git
+   3cc8494..14fd62a  main -> main
+[1]+  Done                    gitk
+
+MINSK+Andrey_Daragenski@EPBYMINW0944 MINGW64 /c/DiscD/GitRep1/git-demo (main)
+$
